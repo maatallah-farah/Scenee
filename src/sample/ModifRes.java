@@ -6,23 +6,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.event.EventHandler;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Profil {
-
-    double xOffset, yOffset;
+public class ModifRes {
     public Label x;
-
-    public void sauve(MouseEvent mouseEvent) {
-    }
-
-    public void init(ContextMenuEvent contextMenuEvent) {
-    }
     public void bouttIn(MouseEvent event){
         x.setOpacity(0.3);
     }
@@ -36,6 +26,13 @@ public class Profil {
         Parent login = FXMLLoader.load(getClass().getResource("interP.fxml"));
         Scene Slogin=new Scene(login);
         Stage log=(Stage) ( (Node) event.getSource() ).getScene().getWindow();
+        log.setScene(Slogin);
+        log.show();
+    }
+    public void Pclick(MouseEvent mouseEvent) throws IOException {
+        Parent login = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Scene Slogin=new Scene(login);
+        Stage log=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
         log.setScene(Slogin);
         log.show();
     }

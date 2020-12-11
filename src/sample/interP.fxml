@@ -52,7 +52,7 @@
                         </Label>
                      </children>
                   </AnchorPane>
-                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#Pclick" prefHeight="30.0" prefWidth="107.0" text="Déconnexion" textFill="#db6b5a">
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#Pclick" opacity="0.78" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #e63946;" text="Déconnexion" textFill="WHITE">
                      <effect>
                         <Glow />
                      </effect>
@@ -60,7 +60,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                      <padding>
-                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="6.0" />
                      </padding>
                      <font>
                         <Font name="System Bold" size="13.0" />
@@ -105,20 +105,20 @@
                   </HBox>
                   <HBox prefHeight="46.0" prefWidth="134.0" style="-fx-background-color: #e6e7e8; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #FFF;">
                      <children>
-                        <ImageView fitHeight="27.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../image/61183.png" />
+                              <Image url="@../image/795caf79bd23835f75e46c3efaf1656f.png" />
                            </image>
                            <HBox.margin>
-                              <Insets left="3.0" top="6.0" />
+                              <Insets top="6.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label text="Modifier examen" textAlignment="CENTER">
+                        <Label onMouseClicked="#ClickExam" text="Examens" textAlignment="CENTER">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="5.0" top="10.0" />
+                              <Insets top="10.0" />
                            </HBox.margin>
                         </Label>
                      </children>
@@ -129,7 +129,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </HBox>
-                  <HBox prefHeight="46.0" prefWidth="134.0" style="-fx-background-color: #e6e7e8; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #FFF;">
+                  <HBox onMouseClicked="#interNot" prefHeight="46.0" prefWidth="134.0" style="-fx-background-color: #e6e7e8; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #FFF;">
                      <children>
                         <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -139,7 +139,7 @@
                               <Insets left="2.0" top="5.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label text="Récupèrer devoir" textAlignment="CENTER">
+                        <Label text="Consulter notes" textAlignment="CENTER">
                            <font>
                               <Font name="Arial" size="13.0" />
                            </font>
@@ -154,6 +154,32 @@
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                  </HBox>
+                  <HBox onMouseClicked="#modif" prefHeight="46.0" prefWidth="134.0" style="-fx-background-color: #e6e7e8; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #FFF;">
+                     <children>
+                        <ImageView fitHeight="27.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/61183.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="3.0" top="6.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Modifier Examens" textAlignment="CENTER">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="5.0" />
+                     </VBox.margin>
                   </HBox>
                </children>
                <HBox.margin>

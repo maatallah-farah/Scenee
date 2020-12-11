@@ -36,6 +36,15 @@ public class InterP {
         log.show();
     }
 
+    public void ClickExam(MouseEvent mouseEvent) throws IOException {
+        Parent login = FXMLLoader.load(getClass().getResource("Exam.fxml"));
+        Scene Slogin=new Scene(login);
+        Stage log=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
+        log.setScene(Slogin);
+        log.show();
+    }
+
+    //load page
     /*public void loadPage(String p) throws IOException {
         Parent root=null;
         root=FXMLLoader.load(getClass().getResource(p+".fxml"));
@@ -48,6 +57,13 @@ public class InterP {
 
     public void Bdepo(MouseEvent mouseEvent) {
     }
+    public void interNot(MouseEvent mouseEvent) throws IOException {
+        Parent login = FXMLLoader.load(getClass().getResource("InterNote.fxml"));
+        Scene Slogin=new Scene(login);
+        Stage log=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
+        log.setScene(Slogin);
+        log.show();
+    }
 
     public void Bnot(MouseEvent mouseEvent) {
     }
@@ -59,5 +75,13 @@ public class InterP {
     }
     public void bouttonExt(MouseEvent event){
         Platform.exit();
+    }
+
+    public void modif(MouseEvent mouseEvent) throws IOException {
+        Parent login = FXMLLoader.load(getClass().getResource("ModifRes.fxml"));
+        Scene Slogin=new Scene(login);
+        Stage log=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
+        log.setScene(Slogin);
+        log.show();
     }
 }

@@ -126,15 +126,22 @@
       </HBox>
       <ButtonBar prefHeight="69.0" prefWidth="584.0">
         <buttons>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="58.0" prefHeight="58.0" prefWidth="150.0" />
-            <Button mnemonicParsing="false" onContextMenuRequested="#init" text="Réinitialiser" textFill="#db6b5a">
-               <font>
-                  <Font size="13.0" />
-               </font>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="58.0" prefHeight="58.0" prefWidth="150.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" layoutY="15.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></AnchorPane>
+            <Button mnemonicParsing="false" onContextMenuRequested="#init" opacity="0.8" style="-fx-background-color: #58B4D1;" text="Réinitialiser" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-          <Button mnemonicParsing="false" onMouseClicked="#sauve" text="Sauvegarder " textFill="#db6b5a">
+          <Button mnemonicParsing="false" onMouseClicked="#sauve" opacity="0.8" style="-fx-background-color: #66CDAA;" text="Sauvegarder " textFill="WHITE">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

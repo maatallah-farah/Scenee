@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #333652;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Exam">
+   <children>
+      <Label contentDisplay="RIGHT" layoutX="569.0" layoutY="8.0" onMouseEntered="#bouttIn" onMouseExited="#bouttOut" onMousePressed="#bouttonExt" text="X" textFill="#9ea1a4" fx:id="x">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <HBox layoutX="14.0" layoutY="44.0" prefHeight="26.0" prefWidth="574.0" style="-fx-background-color: #f0f1f2; -fx-background-radius: 5;">
+         <children>
+            <AnchorPane prefHeight="46.0" prefWidth="60.0" />
+            <ImageView fitHeight="40.0" fitWidth="55.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/fc6eec59602adf47250c54e3bf08c4e5.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets top="2.0" />
+               </HBox.margin>
+            </ImageView>
+            <AnchorPane prefHeight="42.0" prefWidth="26.0" />
+            <Label opacity="0.47" text="Exams Corner" textFill="#848282">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Arial Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
