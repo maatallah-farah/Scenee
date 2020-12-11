@@ -133,7 +133,7 @@
                      <children>
                         <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../image/téléchargement%20(2).png" />
+                              <Image url="@../image/telechargement2.png" />
                            </image>
                            <HBox.margin>
                               <Insets left="2.0" top="5.0" />

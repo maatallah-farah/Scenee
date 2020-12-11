@@ -26,15 +26,5 @@ public class Profil {
         Platform.exit();
     }
 
-    public void bouttIn(MouseEvent event) {
-        x.setOpacity(0.3);
-    }
 
-    public void bouttOut(MouseEvent event) {
-        x.setOpacity(1);
-    }
-
-    public void bouttonExt(MouseEvent event) {
-        Platform.exit();
-    }
 }
