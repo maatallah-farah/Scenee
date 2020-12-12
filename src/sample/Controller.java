@@ -20,7 +20,8 @@ public class Controller {
     public Label x;
 
     public void click(MouseEvent mouseEvent) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("InterP.fxml"));
+        //Parent root= FXMLLoader.load(getClass().getResource("InterP.fxml"));
+        Parent root= FXMLLoader.load(getClass().getResource("InterProf.fxml"));
         Scene aaa=new Scene(root);
         Stage b=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
         b.setScene(aaa);
