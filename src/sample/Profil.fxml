@@ -62,7 +62,7 @@
                   <Insets top="10.0" />
                </HBox.margin></Label>
             <AnchorPane prefHeight="60.0" prefWidth="130.0" />
-            <TextField alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="Nom &amp; Prenom" style="-fx-background-color: #E9EAEC;">
+            <TextField fx:id="np" alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="Nom &amp; Prenom" style="-fx-background-color: #E9EAEC;">
                <HBox.margin>
                   <Insets top="10.0" />
                </HBox.margin></TextField>
@@ -76,7 +76,7 @@
                   <Insets top="9.0" />
                </HBox.margin></Label>
             <AnchorPane prefHeight="50.0" prefWidth="119.0" />
-            <TextField alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="Date de Naissance" style="-fx-background-color: #E9EAEC;">
+            <TextField fx:id="dn" alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="Date de Naissance" style="-fx-background-color: #E9EAEC;">
                <HBox.margin>
                   <Insets top="9.0" />
                </HBox.margin></TextField>
@@ -90,7 +90,7 @@
                   <Insets top="9.0" />
                </HBox.margin></Label>
             <AnchorPane prefHeight="45.0" prefWidth="159.0" />
-            <TextField alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="Téléphone" style="-fx-background-color: #E9EAEC;">
+            <TextField fx:id="tel" alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="Téléphone" style="-fx-background-color: #E9EAEC;">
                <HBox.margin>
                   <Insets top="9.0" />
                </HBox.margin></TextField>
@@ -104,7 +104,7 @@
                   <Insets top="9.0" />
                </HBox.margin></Label>
             <AnchorPane prefHeight="60.0" prefWidth="185.0" />
-            <TextField alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="exemple@exemple.com" style="-fx-background-color: #E9EAEC;">
+            <TextField fx:id="em" alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="exemple@exemple.com" style="-fx-background-color: #E9EAEC;">
                <HBox.margin>
                   <Insets top="9.0" />
                </HBox.margin></TextField>
@@ -118,7 +118,7 @@
                   <Insets top="7.0" />
                </HBox.margin></Label>
             <AnchorPane prefHeight="54.0" prefWidth="142.0" />
-            <TextField alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="Mot de Passe " style="-fx-background-color: #E9EAEC;">
+            <TextField fx:id="mp" alignment="CENTER" prefHeight="26.0" prefWidth="177.0" promptText="Mot de Passe " style="-fx-background-color: #E9EAEC;">
                <HBox.margin>
                   <Insets top="7.0" />
                </HBox.margin></TextField>
