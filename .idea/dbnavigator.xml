@@ -23,12 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="false" />
-    <loaded-nodes>
-      <connection connection-id="6e0f6648-00fc-4770-9526-8d868b8f63b2">
-        <schema name="ARBI" object-types="constraint, materialized view, view, table, index, package, database trigger, dblink, dimension, function, cluster, dataset trigger, nested table, synonym, sequence, type, procedure, column" />
-        <schema name="PUBLIC" object-types="materialized view, view, table, package, function, synonym, sequence, type" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="6e0f6648-00fc-4770-9526-8d868b8f63b2">

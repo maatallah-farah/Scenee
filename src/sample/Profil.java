@@ -20,8 +20,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Profil {
-    @FXML
-    TextField np,dn,tel,em,mp;
+    public TextField np,dn,tel,em,mp;
 
 
     Connection com = DB.connect();
@@ -57,7 +56,12 @@ public class Profil {
         }
     }
 
-    public void init(ContextMenuEvent contextMenuEvent) {
+    public void init(MouseEvent contextMenuEvent) {
+        np.setText("");
+        dn.setText("");
+        tel.setText("");
+        em.setText("");
+        mp.setText("");
     }
     public void bouttIn(MouseEvent event){
         x.setOpacity(0.3);

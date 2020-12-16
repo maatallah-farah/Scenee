@@ -140,7 +140,7 @@
                <padding>
                   <Insets right="10.0" />
                </padding></AnchorPane>
-            <Button mnemonicParsing="false" onContextMenuRequested="#init" opacity="0.8" style="-fx-background-color: #58B4D1;" text="Réinitialiser" textFill="WHITE">
+            <Button mnemonicParsing="false" onMouseClicked="#init" opacity="0.8" style="-fx-background-color: #58B4D1;" text="Réinitialiser" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
