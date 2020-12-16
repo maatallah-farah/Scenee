@@ -39,13 +39,6 @@ public class InterProf {
         log.show();
     }
 
-    public void ClickExam(MouseEvent mouseEvent) throws IOException {
-        Parent login = FXMLLoader.load(getClass().getResource("Exam.fxml"));
-        Scene Slogin=new Scene(login);
-        Stage log=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
-        log.setScene(Slogin);
-        log.show();
-    }
 
     public void Bdepo(MouseEvent mouseEvent) {
     }
@@ -78,6 +71,14 @@ public class InterProf {
     }
 
     public void delete(MouseEvent mouseEvent) {
+    }
+
+    public void clickcr(MouseEvent mouseEvent) throws IOException {
+        Parent login = FXMLLoader.load(getClass().getResource("D_exam.fxml"));
+        Scene Slogin=new Scene(login);
+        Stage log=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
+        log.setScene(Slogin);
+        log.show();
     }
 
 

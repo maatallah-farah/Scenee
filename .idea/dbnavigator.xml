@@ -25,14 +25,14 @@
     <show-object-properties value="false" />
     <loaded-nodes>
       <connection connection-id="6e0f6648-00fc-4770-9526-8d868b8f63b2">
-        <schema name="ARBI" object-types="dblink, package function, constraint, nested table, type procedure, sequence, type function, package, table, index, procedure, view, package type, function, materialized view, package procedure, type, dataset trigger, database trigger, synonym, cluster, column, dimension" />
-        <schema name="PUBLIC" object-types="sequence, package, table, procedure, view, function, materialized view, type, synonym" />
+        <schema name="ARBI" object-types="constraint, materialized view, view, table, index, package, database trigger, dblink, dimension, function, cluster, dataset trigger, nested table, synonym, sequence, type, procedure, column" />
+        <schema name="PUBLIC" object-types="materialized view, view, table, package, function, synonym, sequence, type" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="6e0f6648-00fc-4770-9526-8d868b8f63b2">
-      <console name="connect" type="STANDARD" schema="ARBI" session="Main"><![CDATA[select * from ETUDIANT ;]]></console>
+      <console name="connect" type="STANDARD" schema="ARBI" session="Main"><![CDATA[select * from ETUDIANT;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -42,6 +42,7 @@
     <connection id="6e0f6648-00fc-4770-9526-8d868b8f63b2" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="6e0f6648-00fc-4770-9526-8d868b8f63b2" dataset="ARBI.PROF" active-filter-id="" />
     <filter-actions connection-id="6e0f6648-00fc-4770-9526-8d868b8f63b2" dataset="ARBI.ETUDIANT" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">

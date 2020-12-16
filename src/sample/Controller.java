@@ -47,6 +47,9 @@ public class Controller {
             throwables.printStackTrace();
         }
     }
+   // public  String principal=m.getText(); // TODO: 16/12/2020
+
+
 
     public void click(MouseEvent mouseEvent) throws IOException {
         String mail=m.getText();

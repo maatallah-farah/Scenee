@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -22,24 +23,38 @@ public class Profil {
     @FXML
     TextField np,dn,tel,em,mp;
 
+
     Connection com = DB.connect();
-    Statement st;
+    PreparedStatement st;
 
-    {
-        try {
-            st = com.createStatement();
-            //st.executeQuery();
-            st.executeQuery("");
 
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-    }
 
     double xOffset, yOffset;
-    public Label x;
+    public Label x,msg;
 
     public void sauve(MouseEvent mouseEvent) {
+        {
+            try {
+                st = com.prepareStatement("update etudiant  set name=? , datenaiss=?, tel=?,pass=? where mail= ? ");
+
+                st.setString (1,np.getText());
+
+                st.setString(2,dn.getText() );
+                st.setString(3,tel.getText() );
+                st.setString(4,mp.getText() );
+                st.setString(5,em.getText() );
+
+
+
+                //st.executeQuery();
+                st.executeQuery();
+                msg.setVisible(true);
+
+
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
     }
 
     public void init(ContextMenuEvent contextMenuEvent) {
