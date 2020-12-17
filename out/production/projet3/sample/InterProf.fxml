@@ -140,7 +140,7 @@
                                         <Insets left="2.0" top="5.0" />
                                     </HBox.margin>
                                 </ImageView>
-                                <Label text="Valider Examens" textAlignment="CENTER">
+                                <Label onMouseClicked="#noter" text="Valider Examens" textAlignment="CENTER">
                                     <font>
                                         <Font name="Arial" size="13.0" />
                                     </font>

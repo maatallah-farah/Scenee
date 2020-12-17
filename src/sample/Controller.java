@@ -2,6 +2,7 @@ package sample;
 
 import javafx.application.Platform;
 import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -29,9 +30,12 @@ public class Controller {
     public TextField m;
     public TextField p;
     ArrayList<String> L=new ArrayList<String>();
+    ArrayList<String> L1=new ArrayList<String>();
+    @FXML
+            Label err;
 
     Connection com = DB.connect();
-    Statement st;
+    Statement st,st2;
 
     {
         try {
@@ -42,6 +46,12 @@ public class Controller {
             while (resultSet.next()) {
                 String ch = resultSet.getString("mail");
                 L.add(ch);
+            }
+            st2=com.createStatement();
+            ResultSet resultSet1=st2.executeQuery("select mailp from prof");
+            while(resultSet1.next()){
+                String c=resultSet1.getString("mailp");
+                L1.add(c);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -55,38 +65,12 @@ public class Controller {
         String mail=m.getText();
         String password=p.getText();
         if((L.contains(mail) )) {
-            if (password.equals("prof")) {
-                Parent root = FXMLLoader.load(getClass().getResource("InterProf.fxml"));
-                Scene aaa = new Scene(root);
-                Stage b = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-                b.setScene(aaa);
-                b.show();
-
-                root.setOnMousePressed(new EventHandler<MouseEvent>() {
-
-                    @Override
-                    public void handle(MouseEvent event) {
-                        xOffset = event.getSceneX();
-                        yOffset = event.getSceneY();
-                    }
-
-                });
-                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        b.setX(event.getScreenX() - xOffset);
-                        b.setY(event.getScreenY() - yOffset);
-                    }
-
-                });
-            } else if(password.equals("student")){
+            if (password.equals("student")) {
                 Parent root = FXMLLoader.load(getClass().getResource("InterP.fxml"));
-
                 Scene aaa = new Scene(root);
                 Stage b = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
                 b.setScene(aaa);
                 b.show();
-
 
                 root.setOnMousePressed(new EventHandler<MouseEvent>() {
 
@@ -107,9 +91,41 @@ public class Controller {
                 });
             }
         }
-        else {
+        else if(L1.contains(mail)) {
+                if (password.equals("prof")) {
+                    Parent root = FXMLLoader.load(getClass().getResource("InterProf.fxml"));
+
+                    Scene aaa = new Scene(root);
+                    Stage b = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+                    b.setScene(aaa);
+                    b.show();
+
+
+                    root.setOnMousePressed(new EventHandler<MouseEvent>() {
+
+                        @Override
+                        public void handle(MouseEvent event) {
+                            xOffset = event.getSceneX();
+                            yOffset = event.getSceneY();
+                        }
+
+                    });
+                    root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent event) {
+                            b.setX(event.getScreenX() - xOffset);
+                            b.setY(event.getScreenY() - yOffset);
+                        }
+
+                    });
+                }
+        }
+
+        if(!L.contains(mail) | (!L1.contains(mail))) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Email ou mot de passe invalide!");
+            alert.setTitle("Erreur");
+            alert.setHeaderText(null);
+            alert.setContentText("veuillez verifier votre email ou mdp!");
             alert.showAndWait();
         }
     }

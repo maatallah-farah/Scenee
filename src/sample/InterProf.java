@@ -81,6 +81,10 @@ public class InterProf {
         log.show();
     }
 
+    public void noter(MouseEvent mouseEvent) {
+
+    }
+
 
    /* public void delete(MouseEvent mouseEvent) {
       mouseEvent ->  txt.clear();

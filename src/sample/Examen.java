@@ -26,8 +26,8 @@ public class Examen {
         return quest;
     }
 
-    public void setQuest(ArrayList<Question> quest) {
-        this.quest = quest;
+    public void setQuest(ArrayList<Question> a) {
+        this.quest = a;
     }
 
     public void afficher(){

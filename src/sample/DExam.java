@@ -20,8 +20,11 @@ import java.util.List;
 import static java.lang.Integer.parseInt;
 
 public class DExam {
+    private  static  ArrayList<String> L3 = new ArrayList<>() ;
+
     @FXML
     public TextField mat, rep, dead, quest,et;
+
 
 
     public Label x;
@@ -38,30 +41,54 @@ public class DExam {
     }
 
 
-    public ArrayList<String> L= new ArrayList<String>();
+    public static ArrayList<String> L= new ArrayList<String>();
 
     public void ajRep(MouseEvent mouseEvent) {
         L.add(rep.getText());
         rep.setText("");
     }
 
-public ArrayList<Question> L2=new ArrayList<>();
+public static ArrayList<Question> L2=new ArrayList<>();
+
     public void ajquest(MouseEvent mouseEvent) {
         Question q=new Question(quest.getText());
         q.setReponse(L);
         q.setEtat(parseInt(et.getText()));
         quest.setText("");
         L2.add(q);
-        L.clear();
+        //L.clear();
         et.setText("");
     }
+public Examen e=new Examen()   ;
+    public void creer(MouseEvent mouseEvent) throws IOException {
 
-    public void creer(MouseEvent mouseEvent) {
-        Examen e=new Examen();
         e.setQuest(L2);
         e.afficher();
-        L2.clear();
+        //L2.clear();
+        Parent login = FXMLLoader.load(getClass().getResource("Exam.fxml"));
+        Scene Slogin=new Scene(login);
+        Stage log=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
+        log.setScene(Slogin);
+        log.show();
+
+
     }
+    public static ArrayList getkhra(){
+        return L2;
+    }
+    public  static ArrayList getkhraa(){
+        return L;
+    }
+
+    public void aff(MouseEvent mouseEvent) throws IOException {
+
+        Parent login = FXMLLoader.load(getClass().getResource("Exam.fxml"));
+        Scene Slogin=new Scene(login);
+        Stage log=(Stage) ( (Node) mouseEvent.getSource() ).getScene().getWindow();
+        log.setScene(Slogin);
+        log.show();
+    }
+
 
 
     public void back(MouseEvent mouseEvent) throws IOException {

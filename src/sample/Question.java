@@ -44,7 +44,9 @@ public class Question {
     }
     public void afficherQuest(){
         System.out.println( enonce+":");
-        reponse.forEach(System.out::println);
+       for (int i=0; i<reponse.size();i++){
+           System.out.println(reponse.get(i));
+       }
     }
     public boolean lireReponseAuClavier(){
         Scanner input = new Scanner(System.in);
